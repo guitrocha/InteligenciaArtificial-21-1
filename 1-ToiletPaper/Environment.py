@@ -15,7 +15,12 @@ class Environment:
         self.max_n = 1500
 
     def initial_percepts(self):
-        return {"n": self.n, "price": self.price, "max_n": self.max_n}
+        return {
+            "n": self.n,
+            "price": self.price,
+            "max_n": self.max_n,
+            "usage": self.mu_usage[3],
+        }
 
     def signal(self, action):
 
@@ -38,4 +43,9 @@ class Environment:
                 self.price = max(np.random.normal(self.mu_price, self.sigma_price), 0.9)
 
         self.clock += 1
-        return {"n": self.n, "price": self.price, "max_n": self.max_n}
+        return {
+            "n": self.n,
+            "price": self.price,
+            "max_n": self.max_n,
+            "usage": usage,
+        }
