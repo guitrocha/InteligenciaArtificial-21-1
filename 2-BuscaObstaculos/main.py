@@ -1,6 +1,6 @@
 import numpy as np
 
-from Agent import AgentBFS, AgentDFS
+from Agent import AgentBFS, AgentDFS, AgentGuloso
 from Environment import Environment
 
 
@@ -25,7 +25,7 @@ def show_result(agent_type, path):
 
 if __name__ == "__main__":
 
-    tam = 8
+    tam = 5
     prob = 0.5
 
     map = generate_map(tam, prob)
@@ -60,7 +60,12 @@ if __name__ == "__main__":
     ag = AgentDFS(env)
     path = ag.act()
     show_result("DFS", path)
+
     # Guloso
+    env = Environment(map, start, goal)
+    ag = AgentGuloso(env)
+    path = ag.act()
+    show_result("Guloso", path)
 
     # Menor custo primeiro
 
