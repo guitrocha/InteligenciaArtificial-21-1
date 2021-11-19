@@ -11,3 +11,11 @@ Sistema de ambiente/agente em que o agente controla o estoque de papel higiênic
 
 Sistema de ambiente/agente em que o agente explora um campo com obstáculos (ambiente). Dada um posição inicial e uma posição final, o agente deve encontrar o
 caminho de uma até a outra, desviando dos obstáculos. Cada agente estará implementando os seguintes algoritmos de busca: BFS, DFS, Guloso, Menor custo primeiro, A* e Branch and Bound
+
+### 3. CSP
+
+Algoritmo de consistância de arcos
+
+### 4. Agentes Lógicos
+
+Algoritmo de provas Bottom UP e Top Down para uma base de conhecimento
